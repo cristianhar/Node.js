@@ -20,9 +20,9 @@ Para instalar las dependencias del proyecto, ejecuta el siguiente comando en la 
 
 ```bash
 npm install
+```
 
-
-Configuración
+## **Configuración**
 Antes de ejecutar la aplicación, asegúrate de tener configurada tu base de datos MySQL y actualiza el archivo src/database/connection/db.js con los detalles de tu conexión.
 
 Ejemplo de configuración en db.js:
@@ -36,77 +36,77 @@ const config = {
 };
 
 export default config;
-
+```
 
 Para iniciar la aplicación, ejecuta el siguiente comando:
 ```npm start
 La aplicación estará disponible en http://localhost:3000.
+```
 
-Rutas de la API
-GET /users
-Obtiene todos los usuarios de la base de datos.
+## **Rutas de la API**
+- GET /users
+- Obtiene todos los usuarios de la base de datos.
 
-Respuesta:
+## **Respuesta**:
 
-200 OK: Lista de usuarios.
-GET /users/:id
-Obtiene un usuario por ID.
+- 200 OK: Lista de usuarios.
+- GET /users/:id
+- Obtiene un usuario por ID.
 
-Parámetros:
+## **Parámetros:**
 
-id (en la URL): ID del usuario.
-Respuesta:
+- id (en la URL): ID del usuario.
 
-200 OK: Información del usuario.
-404 Not Found: Si el usuario no existe.
-GET /create/:nombres/:apellidos/:edad
-Crea un nuevo usuario.
+## **Respuesta**:
 
-Parámetros:
+- 200 OK: Información del usuario.
+- 404 Not Found: Si el usuario no existe.
+- GET /create/:nombres/:apellidos/:edad
+- Crea un nuevo usuario.
 
-nombres (en la URL): Nombres del usuario.
-apellidos (en la URL): Apellidos del usuario.
-edad (en la URL): Edad del usuario.
-Respuesta:
+## **Parámetros:**
 
-200 OK: Información del nuevo usuario.
-GET /update/:id/:edad
-Actualiza la edad de un usuario existente.
+- nombres (en la URL): Nombres del usuario.
+- apellidos (en la URL): Apellidos del usuario.
+- edad (en la URL): Edad del usuario.
+  
+## **Respuesta**:
 
-Parámetros:
+- 200 OK: Información del nuevo usuario.
+- GET /update/:id/:edad
+- Actualiza la edad de un usuario existente.
 
-id (en la URL): ID del usuario.
-edad (en la URL): Nueva edad del usuario.
-Respuesta:
+## **Parámetros:**
 
-200 OK: Información del usuario actualizado.
-GET /delete/:id
-Elimina un usuario por ID.
+- id (en la URL): ID del usuario.
+- edad (en la URL): Nueva edad del usuario.
 
-Parámetros:
+## **Respuesta**:
 
-id (en la URL): ID del usuario.
-Respuesta:
+- 200 OK: Información del usuario actualizado.
+- GET /delete/:id
+- Elimina un usuario por ID.
 
-200 OK: Información del usuario eliminado.
-Estructura de Clases
-Database
-Métodos:
-getConnection(): Obtiene una conexión a la base de datos.
-query(sql, params): Ejecuta una consulta SQL con parámetros.
-close(): Cierra la conexión a la base de datos.
-ItemRepository
-Métodos:
-getAllUsers(): Obtiene todos los usuarios.
-getUserById(id): Obtiene un usuario por ID.
-create(nombres, apellidos, edad): Crea un nuevo usuario.
-update(id, edad): Actualiza la edad de un usuario.
-delete(id): Elimina un usuario por ID.
-Contribuciones
-Si deseas contribuir al proyecto, por favor sigue estos pasos:
+## **Parámetros:**
 
-Realiza un fork del repositorio.
-Crea una nueva rama (git checkout -b feature/nueva-funcionalidad).
-Realiza tus cambios y haz commit (git commit -am 'Añadir nueva funcionalidad').
-Empuja los cambios (git push origin feature/nueva-funcionalidad).
-Abre una solicitud de extracción (pull request).
+- id (en la URL): ID del usuario.
+
+## **Respuesta**:
+- 200 OK: Información del usuario eliminado.
+
+## **Estructura de Clases**
+- Database
+
+## **Métodos**:
+- getConnection(): Obtiene una conexión a la base de datos.
+- query(sql, params): Ejecuta una consulta SQL con parámetros.
+- close(): Cierra la conexión a la base de datos.
+
+## **ItemRepository**
+## **Métodos**:
+
+- getAllUsers(): Obtiene todos los usuarios.
+- getUserById(id): Obtiene un usuario por ID.
+- create(nombres, apellidos, edad): Crea un nuevo usuario.
+- update(id, edad): Actualiza la edad de un usuario.
+- delete(id): Elimina un usuario por ID.
